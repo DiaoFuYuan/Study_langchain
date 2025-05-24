@@ -2,7 +2,7 @@
 
 ## RAG工作流程图
 
-![RAG工作流程图](rag_workflow.png)
+![RAG工作流程图](.file/rag_workflow.png)
 
 一个典型的RAG应用有两个主要组成部分：
 
@@ -11,21 +11,21 @@
 
 ## RAG知识库搭建步骤
 
-![索引工作流程图](index.png)
+![索引工作流程图](.file/index.png)
 
 第一步：加载索引(Indexing)：\
 **1.加载(Load)**：首先我们需要加载数据。这是通过文档加载器document_Loaders完成的。\
 **2.分割(Split)**：文本分割器Text_splitters将大型文档( Documents )分成更小的块(chunks)。这对于索引数据和将其传递给模型都很有用，因为大块数据更难搜索，而且不适合模型有限的上下文窗口。\
 **3.存储(Store)**：我们需要一个地方来存储和索引我们的分割(splits)，以便后续可以对其进行搜索。这通常使用向量存储VectorStore和嵌入模型Embeddings模型来完成。
 
-![检索与生成工作流程图](shengcheng_index.png)
+![检索与生成工作流程图](.file/shengcheng_index.png)
 
 第二步：检索和生成(Retrievaland generation)：\
 **1.检索(Retrieve)**：给定用户输入，使用检索器Retriever从存储中检索相关的文本片段。\
 **2.生成(Generate)**：ChatModel使用包含问题和检索到的数据的提示来生成答案。
 
 ## 实现流程
-![实现流程图](progssing.png)
+![实现流程图](.file/progssing.png)
 
 一个 RAG 程序的 APP 主要有以下流程：\
 1.用户在 RAG 客户端上传一个txt文件。\
